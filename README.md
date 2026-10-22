@@ -1,15 +1,15 @@
-# Amrutha — Personal Portfolio
+# Amrutha  Personal Portfolio
 
 A creative, modern and responsive personal portfolio website for **Amrutha**, built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/) and [Tailwind CSS](https://tailwindcss.com/).
 
 ## ? Features
 
-- **Creative pink theme** — soft gradients, subtle animations and decorative illustrations
-- **Fully responsive** — phones, tablets and desktops
-- **Accessible** — semantic HTML, visible focus, keyboard navigation, reduced motion support
-- **App Router + RSC-first** — fast, maintainable and easy to extend
-- **Honest by default** — no fake stats/credentials; unknown details stay editable
-- **Vercel-ready** — zero-config deployment
+- **Creative pink theme** ï¿½ soft gradients, subtle animations and decorative illustrations
+- **Fully responsive** ï¿½ phones, tablets and desktops
+- **Accessible** ï¿½ semantic HTML, visible focus, keyboard navigation, reduced motion support
+- **App Router + RSC-first** ï¿½ fast, maintainable and easy to extend
+- **Honest by default** ï¿½ no fake stats/credentials; unknown details stay editable
+- **Vercel-ready** ï¿½ zero-config deployment
 
 ## ??? Tech Stack
 
