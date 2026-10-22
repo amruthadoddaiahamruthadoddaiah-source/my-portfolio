@@ -3,10 +3,15 @@ import { GitHubIcon, LinkedInIcon } from "@/components/SocialIcons";
 import { navLinks, profile, socials } from "@/data/portfolio";
 
 const activeSocials = socials.filter(
-  (social): social is typeof socials[number] & { href: string } => Boolean(social.href),
+  (social): social is (typeof socials)[number] & { href: string } =>
+    Boolean(social.href),
 );
 
-export default function Footer() {
+// "use cache" lets this component read the current date at build time and reuse
+// the result, instead of blocking prerendering (required by Next.js 16 cache
+// components). The year refreshes on each new deployment.
+export default async function Footer() {
+  "use cache";
   const year = new Date().getFullYear();
 
   return (
@@ -14,12 +19,15 @@ export default function Footer() {
       <div className="container-page flex flex-col gap-10">
         <div className="grid gap-8 md:grid-cols-[1.4fr_0.6fr] md:items-start">
           <div className="flex flex-col gap-4">
-            <a href="#home" className="font-display text-2xl font-semibold text-gradient">
+            <a
+              href="#home"
+              className="font-display text-2xl font-semibold text-gradient"
+            >
               {profile.wordmark}
             </a>
             <p className="max-w-xl leading-relaxed text-[color:var(--color-mauve)]">
-              A student developer learning to turn ideas into code. Built with care,
-              curiosity and a whole lot of pink.
+              A student developer learning to turn ideas into code. Built with
+              care, curiosity and a little pink.
             </p>
             <div className="flex flex-wrap items-center gap-2">
               {activeSocials.map((social) => (
@@ -57,11 +65,15 @@ export default function Footer() {
         <div className="flex flex-col items-start gap-4 border-t border-[color:var(--color-line)] pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="flex items-center gap-2 text-sm text-[color:var(--color-mauve)]">
             <span>Made with</span>
-            <Icon name="heart" size={16} className="text-[color:var(--color-petal)]" />
+            <Icon
+              name="heart"
+              size={16}
+              className="text-[color:var(--color-petal)]"
+            />
             <span>by {profile.name}</span>
           </p>
           <p className="text-sm text-[color:var(--color-mauve)]">
-            © {year} {profile.name}. All rights reserved.
+            &copy; {year} {profile.name}. All rights reserved.
           </p>
         </div>
       </div>
