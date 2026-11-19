@@ -1,5 +1,5 @@
 # Amrutha  Personal Portfolio
-
+#this is amrutha's portfolio
 A creative, modern and responsive personal portfolio website for **Amrutha**, built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/) and [Tailwind CSS](https://tailwindcss.com/).
 
 ## ? Features
